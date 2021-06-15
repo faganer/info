@@ -1,0 +1,59 @@
+/* Buttons
+   ========================================================================== */
+
+.btn,
+a.btn {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  outline: none;
+  overflow: visible;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  zoom: 1;
+}
+
+@each $btnName,
+  $bgColor,
+  $textColor,
+$hoverColor in (default, #f1f1f1, #303030, #f8f9fa),
+(primary, #1458d4, #fff, #387bf4),
+(secondary, #09aca8, #fff, #25c2be) {
+
+  .btn-#{$btnName},
+  a.btn-#{$btnName} {
+    background-color: $bgColor;
+    color: $textColor;
+
+    &:hover {
+      background-color: $hoverColor;
+      color: $textColor;
+    }
+  }
+
+  a.btn.btn-#{$btnName} {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@each $btnSize,
+  $val in (xs, 80%),
+  (sm, 90%),
+(md, 110%),
+(lg, 120%, ) {
+
+  .btn-#{$btnSize},
+  a.btn-#{$btnSize} {
+    font-size: $val;
+  }
+}

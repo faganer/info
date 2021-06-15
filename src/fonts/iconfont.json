@@ -1,0 +1,156 @@
+{
+  "id": "1531731",
+  "name": "info",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "WordPress theme:info.",
+  "glyphs": [
+    {
+      "icon_id": "760252",
+      "name": "weibo",
+      "font_class": "weibo",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "489975",
+      "name": "colorize",
+      "font_class": "colorize",
+      "unicode": "ead6",
+      "unicode_decimal": 60118
+    },
+    {
+      "icon_id": "489971",
+      "name": "chat_bubble_outline",
+      "font_class": "chatbubbleoutline",
+      "unicode": "ead2",
+      "unicode_decimal": 60114
+    },
+    {
+      "icon_id": "489803",
+      "name": "account_circle",
+      "font_class": "accountcircle",
+      "unicode": "ea39",
+      "unicode_decimal": 59961
+    },
+    {
+      "icon_id": "490033",
+      "name": "date_range",
+      "font_class": "daterange",
+      "unicode": "eb0a",
+      "unicode_decimal": 60170
+    },
+    {
+      "icon_id": "490036",
+      "name": "description",
+      "font_class": "description",
+      "unicode": "eb0d",
+      "unicode_decimal": 60173
+    },
+    {
+      "icon_id": "489817",
+      "name": "access_time",
+      "font_class": "accesstime",
+      "unicode": "ea47",
+      "unicode_decimal": 59975
+    },
+    {
+      "icon_id": "490288",
+      "name": "link",
+      "font_class": "link",
+      "unicode": "ebff",
+      "unicode_decimal": 60415
+    },
+    {
+      "icon_id": "490444",
+      "name": "perm_identity",
+      "font_class": "permidentity",
+      "unicode": "ec84",
+      "unicode_decimal": 60548
+    },
+    {
+      "icon_id": "397446",
+      "name": "icon-qq",
+      "font_class": "qq1",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "1756692",
+      "name": "wechat",
+      "font_class": "web-icon-",
+      "unicode": "e6cb",
+      "unicode_decimal": 59083
+    },
+    {
+      "icon_id": "489935",
+      "name": "card_giftcard",
+      "font_class": "cardgiftcard",
+      "unicode": "eab1",
+      "unicode_decimal": 60081
+    },
+    {
+      "icon_id": "490086",
+      "name": "expand_less",
+      "font_class": "expandless",
+      "unicode": "eb3e",
+      "unicode_decimal": 60222
+    },
+    {
+      "icon_id": "489982",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "eadd",
+      "unicode_decimal": 60125
+    },
+    {
+      "icon_id": "781519",
+      "name": "标签1-01",
+      "font_class": "biaoqian101",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "490261",
+      "name": "keyboard_arrow_left",
+      "font_class": "keyboardarrowleft",
+      "unicode": "ebe5",
+      "unicode_decimal": 60389
+    },
+    {
+      "icon_id": "490262",
+      "name": "keyboard_arrow_right",
+      "font_class": "keyboardarrowright",
+      "unicode": "ebe6",
+      "unicode_decimal": 60390
+    },
+    {
+      "icon_id": "490353",
+      "name": "menu",
+      "font_class": "menu",
+      "unicode": "ec3a",
+      "unicode_decimal": 60474
+    },
+    {
+      "icon_id": "490576",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "ece1",
+      "unicode_decimal": 60641
+    },
+    {
+      "icon_id": "489881",
+      "name": "autorenew",
+      "font_class": "autorenew",
+      "unicode": "ea80",
+      "unicode_decimal": 60032
+    },
+    {
+      "icon_id": "150628",
+      "name": "话题说话",
+      "font_class": "huatishuohua",
+      "unicode": "e702",
+      "unicode_decimal": 59138
+    }
+  ]
+}

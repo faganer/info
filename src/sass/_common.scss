@@ -1,0 +1,471 @@
+/* Common
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  background: #f6f7f8;
+  color: $primary-color;
+  font-family: Segoe UI, SegoeUI, Microsoft YaHei, 微软雅黑, SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  min-width: 320px;
+  text-size-adjust: 100%;
+
+  // &.wp_mobile {
+  //   * {
+  //     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  //     -webkit-tap-highlight-color: transparent;
+  //     -webkit-touch-callout: none;
+  //     -moz-user-focus: none;
+  //     user-select: none;
+  //     user-select: none;
+  //     user-select: none;
+  //   }
+  // }
+}
+
+a {
+  @include primary-link;
+
+  text-decoration: none;
+
+  &:focus {
+    @include reset-focus;
+  }
+}
+
+img {
+  vertical-align: middle;
+}
+
+code {
+  color: #d63384;
+  font-size: 0.875em;
+  // background-color: rgba(27, 31, 35, 0.05);
+  // border-radius: 3px;
+  // font-size: 85%;
+  padding: 0.2em 0.4em;
+  word-wrap: break-word;
+
+  &.hljs {
+    background-color: #f6f8fa;
+    font-size: 90%;
+    padding: 16px;
+  }
+}
+
+pre {
+  max-width: calc(100vw - 40px);
+  overflow: auto;
+}
+
+input {
+  &[type=checkbox] {
+    appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: -internal-light-dark-color(black, white);
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    height: 16px;
+    letter-spacing: normal;
+    margin: 0;
+    margin-top: -4px;
+    overflow: hidden;
+    -webkit-rtl-ordering: logical;
+    text-align: start;
+    text-indent: 0;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    transition: 0.2s ease-in-out;
+    transition-property: background-color, border;
+    vertical-align: middle;
+    width: 16px;
+    word-spacing: normal;
+    writing-mode: horizontal-tb !important;
+
+    &:checked {
+      background-color: #1e87f0;
+      background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A');
+      border-color: transparent;
+    }
+  }
+
+  &[type=search]::-webkit-search-cancel-button {
+    appearance: none; //此处去掉默认的小×
+  }
+}
+
+blockquote {
+  @include reset-box-model;
+
+  border-left: 4px solid #e5e9f2;
+  color: #999;
+  font-size: 14px;
+  overflow: hidden;
+  padding-left: 1em;
+  position: relative;
+
+  ul,
+  ol {
+    padding-left: 1em;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.primary-link {
+  @include primary-link;
+}
+
+.secondary-link {
+  @include secondary-link;
+}
+
+.primary-bg {
+  @include primary-bg;
+}
+
+.iconfont {
+  display: inline-block;
+  -webkit-text-stroke-width: 0.2px;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+.pagination-container {
+  margin-bottom: 1.2em;
+  margin-top: 1.2em;
+
+  @media screen and (max-width: 48em) {
+    .btn {
+      padding-left: 0.8em;
+      padding-right: 0.8em;
+
+      &.prev,
+      &.next {
+        padding-left: 0.9em;
+        padding-right: 0.9em;
+      }
+    }
+  }
+}
+
+.navigation {
+  &.pagination {
+    opacity: 0;
+  }
+}
+
+.noscroll,
+.noscroll body {
+  overflow: hidden;
+}
+
+.noscroll body {
+  position: relative;
+}
+
+
+/* Reset
+   ========================================================================== */
+
+.reset-box-model {
+  @include reset-box-model;
+}
+
+.reset-font {
+  @include reset-font;
+}
+
+.reset-focus {
+  @include reset-focus;
+}
+
+
+/* Typography
+   ========================================================================== */
+
+.no-bullet {
+  @include no-bullet;
+}
+
+.no-bullets {
+  @include no-bullets;
+}
+
+.inline-list {
+  @include inline-list;
+}
+
+
+/* Layout
+   ========================================================================== */
+
+.flex {
+  @include flex;
+}
+
+.flex-wrap {
+  @include flex-wrap;
+}
+
+.flex-row {
+  @include flex-row;
+}
+
+.flex-column {
+  @include flex-column;
+}
+
+.flex-bottom {
+  @include flex-bottom;
+}
+
+.flex-between {
+  @include flex-between;
+}
+
+.flex-left {
+  @include flex-left;
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.flex-right {
+  @include flex-right;
+}
+
+.flex-stretch {
+  @include flex-stretch;
+}
+
+.flex-top {
+  @include flex-top;
+}
+
+.flex-middle {
+  @include flex-middle;
+}
+
+.flex-around {
+  @include flex-around;
+}
+
+.fn-left {
+  @include fn-left;
+}
+
+.fn-right {
+  @include fn-right;
+}
+
+.fn-center {
+  @include fn-center;
+}
+
+.fn-hide {
+  @include fn-hide;
+}
+
+.container {
+  @include fn-center;
+
+  max-width: 1140px;
+}
+
+.section {
+  @include primary-bg;
+
+  box-shadow: 0 1px 3px rgba(27, 95, 160, 0.1);
+  margin-bottom: 20px;
+  padding: 24px;
+}
+
+.section-title {
+  @include flex;
+  @include flex-between;
+  @include flex-bottom;
+
+  h2 {
+    @include reset-box-model;
+
+    font-size: 24px;
+    font-weight: normal;
+
+    svg {
+      margin-right: 7px;
+      position: relative;
+      top: 3px;
+      width: 1em;
+    }
+
+    .iconfont {
+      color: #1b5fa0;
+      font-size: 28px;
+      margin-right: 10px;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+.section-right {
+  font-size: 14px;
+
+  a {
+    color: $secondary-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary-link;
+    }
+
+    &:visited {
+      color: $secondary-color;
+    }
+  }
+}
+
+
+/* Tab
+   ========================================================================== */
+
+.tab-content-item {
+  display: none;
+
+  &.current {
+    display: block;
+  }
+}
+
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+
+.wp-video {
+  @include fn-center;
+}
+
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background: #fff;
+  // border: 1px solid #f0f0f0;
+  max-width: 96%;
+
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+  // border: 1px solid #f0f0f0;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 90%;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+figcaption {
+  &.wp-caption-text {
+    font-size: 90%;
+    font-style: italic;
+    opacity: 0.8;
+    padding-top: 7px;
+    // margin-top: 10px;
+    // border-top: 1px solid #f0f0f0;
+  }
+}

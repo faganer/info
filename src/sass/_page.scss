@@ -1,0 +1,35 @@
+.page {
+  .site-main {
+    background-color: #fff;
+  }
+
+  .content-area {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 20px;
+  }
+}
+
+.page-navigation {
+  border-bottom: 1px solid #f0f1f3;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.page-menu {
+  a {
+    @include secondary-link;
+
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 3px;
+  }
+
+  .current-menu-item {
+    a {
+      color: $light-color;
+    }
+  }
+}

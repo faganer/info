@@ -1,0 +1,11 @@
+.search {
+  .site-main {
+    background-color: #fff;
+  }
+}
+
+.search-no-results {
+  .site-main {
+    min-height: calc(100vh - 45px - 84px);
+  }
+}

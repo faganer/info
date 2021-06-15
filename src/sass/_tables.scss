@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+table {
+  &.pure-table {
+    font-size: 86%;
+    width: 100%;
+  }
+}
+
+// https://v3.bootcss.com/css/#tables-responsive
+.table-responsive {
+  min-height: 0.01%;
+  overflow-x: auto;
+}
+
+.table-nowrap {
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
+
+.table-wrap {
+  th,
+  td {
+    word-wrap: break-word;
+  }
+}

@@ -1,0 +1,133 @@
+@mixin primary-link {
+  color: $primary-link;
+
+  &:hover {
+    color: #387bf4;
+  }
+}
+
+@mixin secondary-link {
+  color: $secondary-link;
+
+  &:hover {
+    color: $primary-link;
+  }
+}
+
+@mixin primary-bg {
+  background-color: $primary-background-color;
+}
+
+
+/* Layout
+   ========================================================================== */
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+@mixin flex-row {
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  flex-direction: column;
+}
+
+@mixin flex-between {
+  justify-content: space-between;
+}
+
+@mixin flex-left {
+  justify-content: flex-start;
+}
+
+@mixin flex-center {
+  justify-content: center;
+}
+
+@mixin flex-right {
+  justify-content: flex-end;
+}
+
+@mixin flex-stretch {
+  align-items: stretch;
+}
+
+@mixin flex-top {
+  align-items: flex-start;
+}
+
+@mixin flex-middle {
+  align-items: center;
+}
+
+@mixin flex-bottom {
+  align-items: flex-end;
+}
+
+@mixin flex-around {
+  justify-content: space-around;
+}
+
+@mixin fn-left {
+  float: left;
+}
+
+@mixin fn-right {
+  float: right;
+}
+
+@mixin fn-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin fn-hide {
+  display: none;
+}
+
+@mixin reset-box-model {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-font {
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+@mixin reset-focus {
+  outline: 0;
+}
+
+@mixin no-bullet {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+@mixin no-bullets {
+  list-style: none;
+
+  li {
+    @include no-bullet;
+  }
+}
+
+@mixin inline-list {
+  list-style-type: none;
+
+  &,
+  & li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+}

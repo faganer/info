@@ -1,0 +1,167 @@
+.archive {
+  .site-main {
+    background-color: #fff;
+  }
+}
+
+.posts {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+}
+
+.posts-item {
+  margin: 0 -24px;
+  padding: 23px 24px;
+  position: relative;
+
+  &::after {
+    border-bottom: 1px solid #f0f1f3;
+    bottom: 0;
+    content: '';
+    left: 24px;
+    position: absolute;
+    right: 24px;
+  }
+
+  &:hover {
+    background: #f9fafb;
+  }
+}
+
+.posts-item-content {
+  position: relative;
+}
+
+.posts-item-cover {
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  height: 75px;
+  margin-left: 20px;
+  order: 1;
+  overflow: hidden;
+  width: 135px;
+
+  img {
+    border-radius: 3px;
+    display: block;
+    height: 75px;
+    object-fit: cover;
+    width: 135px;
+
+    &.lazyloaded {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.posts-item-info {
+  flex: auto;
+  margin-top: -3px;
+  overflow: hidden;
+}
+
+.posts-item-title {
+  box-orient: vertical;
+  display: box;
+  font-size: 18px;
+  -webkit-line-clamp: 2;
+  line-height: 26px;
+  max-height: 52px;
+  min-height: 26px;
+  overflow: hidden;
+
+  span {
+    &.badge {
+      margin-right: 0.3em;
+    }
+  }
+}
+
+.posts-item-meta {
+  color: $secondary-color;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 7px;
+
+  span {
+    margin-right: 3px;
+    padding-right: 6px;
+    position: relative;
+
+    &::after {
+      background: #cfcfcf;
+      bottom: 2px;
+      position: absolute;
+      right: 0;
+      // content: "";
+      top: 3px;
+      width: 1px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .author {
+    a {
+      @include secondary-link;
+    }
+  }
+
+  .cat {
+    a {
+      opacity: 0;
+      transition: none;
+    }
+  }
+}
+
+.posts-item-desc {
+  box-orient: vertical;
+  color: $secondary-color;
+  display: box;
+  font-size: 14px;
+  height: 45px;
+  -webkit-line-clamp: 2;
+  line-height: 21px;
+  overflow: hidden;
+  padding-top: 3px;
+}
+
+.posts-item-tags {
+  bottom: 0;
+  color: $light-color;
+  font-size: 13px;
+  left: 0;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+  max-width: 436px;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  word-break: keep-all;
+
+  .iconfont {
+    left: 2px;
+    line-height: 1;
+    margin-right: 4px;
+    position: relative;
+    top: 1px;
+  }
+}

@@ -1,0 +1,273 @@
+.wp-pagenavi {
+  background: #f8f9fa;
+  border-color: #f8f9fa;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #f8f9fa;
+  color: #828a92;
+  height: 38px;
+  line-height: 38px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding: 0 30px;
+  text-align: center;
+
+  span,
+  a {
+    display: inline-block;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+// https: //www.zhangxinxu.com/sp/lulu/mockup/content/apis/tips.php
+// .ui-tips-x {
+//   position: fixed !important;
+// }
+// .ui-tips-before {
+//   white-space: nowrap;
+// }
+// https://github.com/aFarkas/lazysizes/
+
+/* fade image in after load */
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: all 300ms;
+}
+
+.no-js img.lazyload {
+  display: none;
+}
+
+// http://iamceege.github.io//#demos
+.tooltipster-sidetip {
+  .tooltipster-content {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .tooltipster-box {
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+  }
+
+  &.tooltipster-left {
+    .tooltipster-arrow-border {
+      border-left-color: rgb(0, 0, 0);
+    }
+
+    .tooltipster-arrow-background {
+      border-left-color: rgb(0, 0, 0);
+    }
+  }
+}
+
+// 相关文章
+.wp_rp_wrap {
+  border: 1px solid #f0f1f3;
+  border-radius: 3px;
+  color: #828a92;
+  font-size: 14px;
+  margin-bottom: 2em;
+  padding: 20px;
+  position: relative;
+}
+
+.related_post_title {
+  @include reset-box-model;
+
+  background: #fff;
+  font-size: 14px;
+  // position: relative;
+  // margin-bottom: 16px;
+  // text-indent: 12px;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 0 10px;
+  // font-size: 20px;
+  position: absolute;
+  top: -10px;
+  z-index: 2;
+  // &:before {
+  //     position: absolute;
+  //     content: "";
+  //     left: 0;
+  //     top: 0;
+  //     bottom: 0;
+  //     width: 4px;
+  //     border-radius: 4px;
+  //     background: $light-color;
+  // }
+}
+
+.related_post {
+  &.wp_rp {
+    @include reset-box-model;
+    @include no-bullets;
+
+    li {
+      color: $secondary-color;
+      line-height: 1;
+      margin-bottom: 12px;
+      padding-left: 12px;
+      position: relative;
+
+      &::before {
+        border: 2px solid;
+        border-color: #c6a3ce;
+        border-radius: 50%;
+        content: '';
+        height: 0;
+        left: 0;
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        width: 0;
+        z-index: 1;
+      }
+    }
+
+    a {
+      @include secondary-link;
+    }
+  }
+}
+
+.wp_rp_footer {
+  display: none;
+}
+
+// 更多标签:https://sweetalert2.github.io/
+body {
+  &.swal2-shown {
+    overflow: auto !important;
+    padding-right: 0 !important;
+  }
+}
+
+.swal2-container {
+  // 更多标签
+  &.tags-all {
+    overflow: hidden !important;
+
+    .swal2-popup {
+      width: 90%;
+    }
+
+    .swal2-content,
+    .swal2-cancel {
+      font-size: 14px;
+    }
+
+    .post_tags {
+      text-align: left;
+
+      a {
+        @include secondary-link;
+
+        display: inline-block;
+        margin: 5px 10px;
+      }
+    }
+  }
+  // 分享到微信
+  &.swal2-wechat {
+    .swal2-title {
+      font-size: 18px;
+      margin: 0 0 20px;
+    }
+
+    .swal2-content {
+      font-size: 16px;
+    }
+
+    .swal2-actions {
+      margin-top: 0;
+    }
+  }
+}
+
+@keyframes swal2-show {
+  0% {
+    transform: scale(0.7);
+    transform: scale(0.7);
+  }
+
+  45% {
+    transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  80% {
+    transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes swal2-show {
+  0% {
+    transform: scale(0.7);
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+// 无聊图
+// https://github.com/rubentd/gifplayer
+// https://getkit.cn/1552.html
+// ins.play-gif {
+//     line-height: 42px;
+// }
+// 相册转为swiper
+.post-content {
+  .swiper-pagination {
+    background: hsla(0, 0%, 0%, 0.8);
+    border-radius: 1em;
+    bottom: 10px !important;
+    color: white;
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: auto;
+    width: 65px;
+  }
+}
+
+// fancybox
+a[data-fancybox] {
+  cursor: zoom-in;
+}
+
+@media screen and (max-width: 1279px) {
+  .single {
+    .post-content {
+      .swiper-container {
+        width: calc(100vw - 40px) !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .single {
+    .post-content {
+      .swiper-container {
+        width: 736px !important;
+      }
+    }
+  }
+}

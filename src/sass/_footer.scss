@@ -1,0 +1,118 @@
+.site-footer {
+  background-color: #fff;
+  border-top: 1px solid #f0f1f3;
+}
+
+.footer-guide {
+  padding: 16px;
+}
+
+.footer-logo,
+.footer-desc {
+  margin-top: 0;
+}
+
+.footer-logo {
+  img {
+    max-height: 34px;
+    max-width: 100px;
+  }
+}
+
+.footer-desc {
+  // max-width: 320px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.footer-navigation {
+  font-size: 12px;
+  line-height: 24px;
+
+  li {
+    @include flex-between;
+
+    flex: 0 0 25%;
+  }
+
+  a {
+    color: $secondary-color;
+
+    &:hover {
+      color: $light-color;
+    }
+  }
+}
+
+.copyright {
+  background: #646d7d;
+  color: #d1d6e1;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+
+  a {
+    color: #d1d6e1;
+    margin-left: 3px;
+    margin-right: 3px;
+
+    &:hover {
+      color: lighten($color: #d1d6e1, $amount: 15);
+    }
+  }
+}
+
+.float {
+  bottom: 50px;
+  display: none;
+  position: fixed;
+  right: 20px;
+  z-index: 100;
+
+  a {
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
+    color: #fff;
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 36px;
+
+    @each $aClass,
+      $bgColor,
+      $bgHover in (qq, #387bf4, #387bf4),
+        (wechat, #09aca8, #09aca8),
+        (aly, #387bf4, #387bf4),
+        (weibo, #eb192d, #eb192d),
+        (scrollTop, $secondary-color, $primary-color) {
+      &.#{$aClass} {
+        background-color: $bgColor;
+
+        &:hover {
+          background-color: $bgHover;
+        }
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      .iconfont {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .iconfont {
+    font-size: 18px;
+  }
+}
+
+.wp_mobile {
+  .float {
+    display: none !important;
+  }
+}
