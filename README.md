@@ -1,0 +1,2 @@
+# info
+A WordPress theme.
