@@ -18,14 +18,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-404 {
   background-image: url(../images/sprite.png);
-  background-position: 0 0;
-  height: 280px;
+  background-position: 0px 0px;
   width: 332px;
+  height: 280px;
 }
-
 .icon-hot {
   background-image: url(../images/sprite.png);
-  background-position: 0 -280px;
-  height: 24px;
+  background-position: 0px -280px;
   width: 40px;
+  height: 24px;
 }

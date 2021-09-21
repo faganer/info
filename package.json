@@ -31,7 +31,6 @@
     "gulp-terser": "^2.0.1",
     "gulp.spritesmith": "^6.11.0",
     "merge-stream": "^2.0.0",
-    "mozjpeg": "^7.0.0",
     "node-sass": "^5.0.0",
     "optipng": "^3.0.0",
     "rfs": "^9.0.3",
@@ -46,5 +45,9 @@
     "Opera > 50",
     "ie >= 10",
     "chrome > 50"
-  ]
+  ],
+  "dependencies": {
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1"
+  }
 }
