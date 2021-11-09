@@ -17,10 +17,10 @@ if ($csf['opt-favicon']) {
     add_action('wp_head', 'favicon', 98);
     function favicon()
     {
-        echo '<link rel="icon" href="'.get_option('_prefix_my_options')['opt-favicon']['url'].'?x-oss-process=image/auto-orient,1/resize,m_fixed,w_32,h_32/quality,q_100" sizes="32x32" />'.PHP_EOL;
-        echo '<link rel="icon" href="'.get_option('_prefix_my_options')['opt-favicon']['url'].'?x-oss-process=image/auto-orient,1/resize,m_fixed,w_192,h_192/quality,q_100" sizes="192x192" />'.PHP_EOL;
-        echo '<link rel="apple-touch-icon-precomposed" href="'.get_option('_prefix_my_options')['opt-favicon']['url'].'?x-oss-process=image/auto-orient,1/resize,m_fixed,w_180,h_180/quality,q_100" />'.PHP_EOL;
-        echo '<meta name="msapplication-TileImage" content="'.get_option('_prefix_my_options')['opt-favicon']['url'].'?x-oss-process=image/auto-orient,1/resize,m_fixed,w_270,h_270/quality,q_100" />'.PHP_EOL;
+        echo '<link rel="icon" href="'.get_option('_prefix_my_options')['opt-favicon']['url'].'?x-oss-process=image/auto-orient,1/resize,m_fixed,w_32,h_32/quality,q_98/format,webp" sizes="32x32" />'.PHP_EOL;
+        echo '<link rel="icon" href="'.get_option('_prefix_my_options')['opt-favicon']['url'].'?x-oss-process=image/auto-orient,1/resize,m_fixed,w_192,h_192/quality,q_98/format,webp" sizes="192x192" />'.PHP_EOL;
+        echo '<link rel="apple-touch-icon-precomposed" href="'.get_option('_prefix_my_options')['opt-favicon']['url'].'?x-oss-process=image/auto-orient,1/resize,m_fixed,w_180,h_180/quality,q_98/format,webp" />'.PHP_EOL;
+        echo '<meta name="msapplication-TileImage" content="'.get_option('_prefix_my_options')['opt-favicon']['url'].'?x-oss-process=image/auto-orient,1/resize,m_fixed,w_270,h_270/quality,q_98/format,webp" />'.PHP_EOL;
     }
 }
 

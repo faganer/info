@@ -11,10 +11,16 @@ $csf = get_option('_prefix_my_options');
            * 特色图像.
            */
           if (has_post_thumbnail()) {
-              $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-            <a class="latest-item-cover flex flex-center" href="<?php the_permalink(); ?>" target="_blank" rel="bookmark"><img src="<?php echo $full_image_url[0]; ?>?x-oss-process=image/auto-orient,1/resize,m_fill,w_208,h_116/quality,Q_100" alt="<?php echo the_title_attribute(array('echo' => 0)); ?>"></a>
-          <?php
-          }
+            $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+            $thumbnailUri = $full_image_url[0];
+            if( substr($thumbnailUri,-4) !== 'webp' ){
+              $thumbnailUri = $thumbnailUri.'?x-oss-process=image/auto-orient,1/resize,m_fill,w_208,h_116/quality,q_98/format,webp';
+            } else {
+              $thumbnailUri = $thumbnailUri.'?x-oss-process=image/auto-orient,1/resize,m_fill,w_208,h_116/quality,q_100';
+            }
+            ?>
+            <a class="latest-item-cover flex flex-center" href="<?php the_permalink(); ?>" target="_blank" rel="bookmark"><img src="<?php echo $thumbnailUri; ?>" alt="<?php echo the_title_attribute(array('echo' => 0)); ?>"></a>
+          <?php }
             /*
              * 无特色图像，随机取出一组幻灯
              */
@@ -22,11 +28,15 @@ $csf = get_option('_prefix_my_options');
               $slides = $csf['opt-thumbnail'];
               $random_keys = array_rand($slides, 1); ?>
             <?php
-
-              $random_keys = array_rand($slides, 1); ?>
-              <a class="latest-item-cover flex flex-center" href="<?php the_permalink(); ?>" target="_blank" rel="bookmark"><img src="<?php echo  $slides[$random_keys]['opt-thumbnail-upload']; ?>?x-oss-process=image/auto-orient,1/resize,m_fill,w_208,h_116/quality,Q_100" alt="<?php echo the_title_attribute(array('echo' => 0)); ?>"></a>
-              <?php
-                      }?>
+              $thumbnailUri = $slides[$random_keys]['opt-thumbnail-upload'];
+              if( substr($thumbnailUri,-4) !== 'webp' ){
+                $thumbnailUri = $thumbnailUri.'?x-oss-process=image/auto-orient,1/resize,m_fill,w_208,h_116/quality,q_98/format,webp';
+              } else {
+                $thumbnailUri = $thumbnailUri.'?x-oss-process=image/auto-orient,1/resize,m_fill,w_208,h_116/quality,q_100';
+              }
+              ?>
+              <a class="latest-item-cover flex flex-center" href="<?php the_permalink(); ?>" target="_blank" rel="bookmark"><img src="<?php echo $thumbnailUri;?>" alt="<?php echo the_title_attribute(array('echo' => 0)); ?>"></a>
+              <?php }?>
           <!-- .latest-item-cover -->
 
           <div class="latest-item-info flex flex-column">

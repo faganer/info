@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>二维码生成器,二维码在线生成器,在线生成二维码</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+	<style>
+		.input-item {
+			width: calc(100%/2 - 100px);
+		}
+
+		.input-item textarea {
+			min-height: 400px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="site">
+		<div class="container">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="https://getkit.cn/">鸽听网</a></li>
+					<li class="breadcrumb-item"><a href="https://getkit.cn/resources/">在线工具</a></li>
+					<li class="breadcrumb-item active" aria-current="page">二维码生成器</li>
+				</ol>
+			</nav>
+			<!-- breadcrumb -->
+			<div class="main">
+				<p>在线生成二维码(QR码/QRCode)</p>
+				<div class="conent d-flex justify-content-between align-items-center">
+					<div class="input-item">
+						<p>URL或其他文本:</p>
+						<textarea name="" id="" cols="30" rows="10" class="form-control input-val"
+							placeholder="https://getkit.cn/resources/"></textarea>
+					</div>
+					<div class="input-sub">
+						<div class="form-group">
+							<label>纠错级别</label>
+							<select class="form-control errorCorrectionLevel">
+								<option value="L">L (Low) ~7%</option>
+								<option value="M">M (Medium) ~15%</option>
+								<option value="Q">Q (Quartile) ~25%</option>
+								<option value="H" selected>H (High) ~30%</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>边缘留白</label>
+							<select class="form-control margin">
+								<option value="1">1</option>
+								<option value="2" selected>2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="0">0</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>放大缩小</label>
+							<select class="form-control scale" >
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10" selected>10</option>
+							</select>
+						</div>
+						<div class="form-group"><button class="btn btn-primary">生成二维码</button></div>
+					</div>
+					<div class="input-item">
+						<p>QR码/QRCode</p>
+						<canvas id="canvas"></canvas>
+						<!-- #canvas -->
+					</div>
+				</div>
+				<!-- .conent -->
+			</div>
+			<!-- .main -->
+
+			<p class="invisible">二维码生成器破 免费版, 永久二维码生成器免费, 在线二维码图片生成器, 二维码转链接在线生成, 文本生成二维码, 如何让二维码扫出来是图片</p>
+			<!-- .invisible -->
+
+		</div>
+		<!-- .container -->
+
+	</div>
+	<!-- .site -->
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+	<script>
+		$(function () {
+			// 二维码生成方法
+			var getQRCode = function (e, level, margin,scale) {
+				level = $(".errorCorrectionLevel").val();
+				margin = $(".margin").val();
+				scale = $(".scale").val();
+				var opts = {
+					errorCorrectionLevel: level,
+					type: 'image/jpeg',
+					margin: margin,
+					scale:scale
+				}
+				QRCode.toCanvas(document.getElementById('canvas'), e, opts, function (error) {
+					if (error) console.error(error)
+					console.log('success!');
+				})
+				console.log(opts)
+			};
+
+			// 初始化二维码
+			getQRCode('https://getkit.cn/resources/');
+
+			// 点击生成二维码
+			$(".input-sub .btn").click(function () {
+				const inputVal = $(".input-val").val();
+				if (inputVal) {
+					getQRCode(inputVal)
+				} else {
+					getQRCode('https://getkit.cn/resources/')
+				}
+			});
+		})
+	</script>
+	<script>
+		// 百度统计
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?d03c6aa8bd7c946819fe6912a648b1c5";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+
+		// 百度自动推送
+		(function () {
+			var bp = document.createElement('script');
+			var curProtocol = window.location.protocol.split(':')[0];
+			if (curProtocol === 'https') {
+				bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+			} else {
+				bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+			}
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(bp, s);
+		})();
+
+		// 360自动收录
+		(function(){
+		var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+		document.write('<script src="' + src + '" id="sozz"><\/script>');
+		})();
+	</script>
+</body>
+
+</html>

@@ -151,6 +151,20 @@ $(function () {
     }
   })
 
+  // 视频自适应
+  const pWidth = $(".single .post-content").width()
+  $(".single video").each(function(){
+    const vWidth = $(this).width()
+    const vHeight = $(this).height()
+    $(this).height(pWidth * vHeight / vWidth)
+    $(this).width(pWidth)
+  })
+
+  // 表格
+  $('.single table,.page table').each(function(){
+    $(this).addClass('table').wrap('<div class="table-responsive"></div>')
+  })
+
   // 推荐
   $('.single .post-share').before('<div class="alert alert-primary" role="alert"><h4 class="alert-heading">推荐</h4><p>阿里云-云小站 -> <a href="https://www.aliyun.com/minisite/goods?userCode=zj48tyhb" class="alert-link" target="_blank">限量代金券</a>，爆款产品5折起。</p><p>滴滴云ai大师码为：<b>2222</b>，可以享受专属折扣。</p><p>滴滴云使者为开发者而生，滴滴云提供专业、便捷、高效的云服务，最高 -> <a class="alert-link" href="https://i.didiyun.com/2dJFbGQJVmM" rel="external nofollow noopener" target="_blank">6折扣代金券</a>。</p>')
 
@@ -213,16 +227,6 @@ $(function () {
     contentAsHTML: true
   })
 
-  // fancybox
-  $('.single .post-content img[class^=size],.single .post-content img[class^=wp-image]').each(function () {
-    if ($(this).parent().is('a')) {
-      $(this).parent('a').attr('data-fancybox', 'images')
-      const caption = $(this).parent('a').siblings('.wp-caption-text').text()
-      if (caption) {
-        $(this).parent('a').attr('data-caption', caption)
-      }
-    }
-  })
 })
 
 // https://highlightjs.org/usage/

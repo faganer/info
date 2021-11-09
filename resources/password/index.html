@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>随机密码生成器</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/fontawesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/solid.min.css">
+	<style>
+		.head-title i {
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="site">
+		<div class="container">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="https://getkit.cn/">鸽听网</a></li>
+					<li class="breadcrumb-item"><a href="https://getkit.cn/resources/">在线工具</a></li>
+					<li class="breadcrumb-item active" aria-current="page">随机密码生成器</li>
+				</ol>
+			</nav>
+			<!-- breadcrumb -->
+			<div class="main">
+				<div class="alert alert-warning mt-3 mb-3" role="alert">
+					这是一个随机密码生成器，可以在线生成4位及其4位以上的随机密码。
+				</div>
+				<!-- .alert -->
+				<form class="needs-validation" novalidate>
+					<div class="head bg-light pt-5 pb-5 mb-3 text-center">
+						<p class="head-title h1 mb-3"><span>随机密码生成器</span><i type="submit"
+								class="fas fa-sync-alt fa-fw ml-3" title="点击生成随机密码"></i></p>
+						<p class="head-button"><button type="button" class="btn btn-primary pl-5 pr-5">复制</button></p>
+					</div>
+					<!-- .head -->
+
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label">密码长度：</label>
+						<div class="col-sm-10">
+							<input type="number" name="length" class="form-control rule-0" value="6" min="4">
+						</div>
+					</div>
+					<!-- .row -->
+
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label">密码规则：</label>
+						<div class="col-sm-10" style="padding-top: calc(.375rem + 1px);">
+							<div class="form-check mb-1">
+								<input class="form-check-input rule-1" type="checkbox" checked
+									data-detail="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+								<label class="form-check-label">
+									大写字母(A-Z)
+								</label>
+							</div>
+							<div class="form-check mb-1">
+								<input class="form-check-input rule-2" type="checkbox" checked
+									data-detail="abcdefghijklmnopqrstuvwxyz">
+								<label class="form-check-label">
+									小写字母(a-z)
+								</label>
+							</div>
+							<div class="form-check mb-1">
+								<input class="form-check-input rule-3" type="checkbox" checked data-detail="0123456789">
+								<label class="form-check-label">
+									数字(0-9)
+								</label>
+							</div>
+							<div class="form-check mb-1">
+								<input class="form-check-input rule-4" type="checkbox" checked
+									data-detail="~!@#$%^&*()_+{}|;:\/<>">
+								<label class="form-check-label">
+									特殊符号： ~!@#$%^&*()_+{}|;:\/<>
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- .row -->
+
+				</form>
+				<!-- form -->
+
+			</div>
+			<!-- .main -->
+
+		</div>
+		<!-- .container -->
+
+	</div>
+	<!-- .site -->
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/localization/messages_zh.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard.js@1.0.1/dist/clipboard.min.js"></script>
+	<script src="index.js"></script>
+	<script>
+		// 百度统计
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?d03c6aa8bd7c946819fe6912a648b1c5";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+
+		// 百度自动推送
+		(function () {
+			var bp = document.createElement('script');
+			var curProtocol = window.location.protocol.split(':')[0];
+			if (curProtocol === 'https') {
+				bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+			} else {
+				bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+			}
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(bp, s);
+		})();
+
+		// 360自动收录
+		(function(){
+		var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+		document.write('<script src="' + src + '" id="sozz"><\/script>');
+		})();
+	</script>
+</body>
+
+</html>

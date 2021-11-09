@@ -142,15 +142,7 @@ function info_scripts()
 
     wp_enqueue_script('jsdelivr-script', 'https://cdn.jsdelivr.net/combine/npm/tooltipster@4.2.7,npm/swiper@4.5.1,npm/jquery.qrcode@1.0.3,npm/sweetalert2@11.0.17/dist/sweetalert2.min.js,gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js', array('jquery'), null, true);
 
-    if( is_single() ){
-        wp_enqueue_script('fancybox-script', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', array('jquery'), null, true);
-    }
-
     wp_enqueue_style('jsdelivr-style', 'https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.1,npm/purecss@1.0.1/build/tables-min.min.css,npm/swiper@4.5.1/dist/css/swiper.min.css,npm/tooltipster@4.2.7/dist/css/tooltipster.bundle.min.css,npm/sweetalert2@11.0.17/dist/sweetalert2.min.css,npm/highlight.js@9.18.1/styles/github.min.css', array(), null, 'all');
-
-    if( is_single() ){
-        wp_enqueue_style('fancybox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', array(), null, 'all');
-    }
 
     wp_enqueue_script('info-script', get_template_directory_uri().'/dist/js/main.min.js', array('jquery'), $jsVer, true);
 

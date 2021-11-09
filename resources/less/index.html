@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>在线LESS编译器,less转css，less在线编译css</title>
+ <meta name="description"
+  content="在线LESS 编译器，实现less在线编译为css，less转css，less在线编译怎么实现的是如此的简单，Less 在线编译器。 在线编译器用于将较少的代码编译为css代码。 在线编译器工具很容易帮助生成CSS代码。">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+ <style>
+  .input-item {
+   width: calc(100%/2 - 100px);
+  }
+
+  .input-item textarea {
+   min-height: 400px;
+  }
+ </style>
+</head>
+
+<body>
+ <div class="site">
+  <div class="container">
+   <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+     <li class="breadcrumb-item"><a href="https://getkit.cn/">鸽听网</a></li>
+     <li class="breadcrumb-item"><a href="https://getkit.cn/resources/">在线工具</a></li>
+     <li class="breadcrumb-item active" aria-current="page">在线LESS编译器</li>
+    </ol>
+   </nav>
+   <!-- breadcrumb -->
+   <div class="main">
+    <div class="conent d-flex justify-content-between align-items-center">
+     <div class="input-item"><textarea name="" id="" cols="30" rows="10" class="form-control"></textarea></div>
+     <div class="input-sub"><button class="btn btn-primary">less 转 css</button></div>
+     <div class="input-item"><textarea name="" id="" cols="30" rows="10" class="form-control"></textarea></div>
+    </div>
+    <!-- .conent -->
+
+   </div>
+   <!-- .main -->
+
+  </div>
+  <!-- .container -->
+
+ </div>
+ <!-- .site -->
+
+ <!-- Modal -->
+ <div class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <h5 class="modal-title">提示</h5>
+     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+     <p>输入源文件Less不能为空！</p>
+    </div>
+    <div class="modal-footer">
+     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+     <button type="button" class="btn btn-primary">确定</button>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/less@3.12.2/dist/less.min.js"></script>
+ <script>
+  $(".input-sub button").click(function () {
+   var lessBefore = $(".input-item:first textarea").val();
+   // less不为空
+   if (lessBefore) {
+    less.render(lessBefore, {
+      paths: ['.', './lib'], // Specify search paths for @import directives
+      filename: 'style.less', // Specify a filename, for better error messages
+      compress: true // Minify CSS output
+     },
+     function (e, output) {
+      $(".input-item:last textarea").val(output.css);
+     });
+   } else {
+    $(".modal").modal('show');
+    $(".modal-footer .btn").click(function () {
+     $(".modal").modal('hide');
+    });
+   }
+  });
+ </script>
+ <script>
+  // 百度统计
+  var _hmt = _hmt || [];
+  (function () {
+   var hm = document.createElement("script");
+   hm.src = "https://hm.baidu.com/hm.js?d03c6aa8bd7c946819fe6912a648b1c5";
+   var s = document.getElementsByTagName("script")[0];
+   s.parentNode.insertBefore(hm, s);
+  })();
+
+  // 百度自动推送
+  (function () {
+   var bp = document.createElement('script');
+   var curProtocol = window.location.protocol.split(':')[0];
+   if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+   } else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+   }
+   var s = document.getElementsByTagName("script")[0];
+   s.parentNode.insertBefore(bp, s);
+  })();
+
+		// 360自动收录
+		(function(){
+		var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+		document.write('<script src="' + src + '" id="sozz"><\/script>');
+		})();
+ </script>
+</body>
+
+</html>

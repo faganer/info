@@ -1,5 +1,5 @@
 <?php
-$csf = get_option('_prefix_my_options'); 
+$csf = get_option('_prefix_my_options');
 get_header(); ?>
 
     <div id="content" class="site-main flex flex-between container">
@@ -16,7 +16,7 @@ get_header(); ?>
             <div class="swiper-container">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                  
+
                   <?php
                   /**
                    * 精选内容.
@@ -35,7 +35,7 @@ get_header(); ?>
                           $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
                         <div class="cover">
                           <a href="<?php echo get_permalink($post->ID); ?>" target="
-                            _blank" rel="bookmark" style="background-image:url(<?php echo $full_image_url[0]; ?>?x-oss-process=image/auto-orient,1/resize,m_fill,w_350,h_198/quality,Q_100)"><?php echo $post->post_title; ?></a>
+                            _blank" rel="bookmark" style="background-image:url(<?php echo $full_image_url[0]; ?>?x-oss-process=image/auto-orient,1/resize,m_fill,w_350,h_198/quality,q_98/format,webp)"><?php echo $post->post_title; ?></a>
                         </div>
                         <!-- .cover -->
                       <?php
@@ -48,12 +48,12 @@ get_header(); ?>
                     $random_keys = array_rand($slides, 1); ?>
                           <div class="cover">
                             <a href="<?php echo get_permalink($post->ID); ?>" target="
-                              _blank" rel="bookmark" style="background-image:url(<?php echo $slides[$random_keys]["opt-thumbnail-upload"]; ?>?x-oss-process=image/auto-orient,1/resize,m_fill,w_350,h_198/quality,Q_100"><?php echo $post->post_title; ?>/a>
+                              _blank" rel="bookmark" style="background-image:url(<?php echo $slides[$random_keys]["opt-thumbnail-upload"]; ?>?x-oss-process=image/auto-orient,1/resize,m_fill,w_350,h_198/quality,q_98/format,webp"><?php echo $post->post_title; ?>/a>
                           </div>
                           <!-- .cover -->
                         <?php
                 } ?>
-                      
+
 
                       <div class="info">
 
@@ -95,16 +95,16 @@ get_header(); ?>
                   <?php
             } ?>
                 </div>
-                
+
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-    
+
             </div>
           </div>
           <!-- .slider -->
         <?php
         }?>
-        
+
         <div class="top section dp-none dp-lg-block">
           <div class="section-title">
             <h2><svg viewBox="0 0 1024 1024"><path d="M946.612679 910.248381a33.235846 33.235846 0 0 1-66.471692 0v-432.084111h66.47622v432.084111z m-132.952439 33.235846H82.43993V79.316005h731.22031v830.932376a98.471551 98.471551 0 0 0 6.116554 33.235846h-6.116554z m66.476219-531.796177V12.839785H15.968237v997.120662h897.408596c55.07163 0 99.712066-44.640436 99.712066-99.712066V411.68805h-132.95244z" fill="#1B5A97"></path><path d="M182.151996 478.159742h531.796177V411.68805H182.151996v66.471692zM182.151996 644.348028h531.796177v-66.47622H182.151996v66.47622zM182.151996 810.536314h531.796177v-66.476219H182.151996v66.476219z" fill="#106A37"></path></svg>精选内容</h2>
@@ -132,7 +132,7 @@ get_header(); ?>
             <a class="top-item-cover flex flex-center"
               href="<?php echo get_permalink($post->ID); ?>"" target="
               _blank" rel="bookmark"><img
-                src="<?php echo $full_image_url[0]; ?>?x-oss-process=image/auto-orient,1/resize,m_fill,w_350,h_198/quality,Q_100"
+                src="<?php echo $full_image_url[0]; ?>?x-oss-process=image/auto-orient,1/resize,m_fill,w_350,h_198/quality,q_98/format,webp"
                 alt="<?php echo $post->post_title; ?>"></a>
             <?php
             }
@@ -144,8 +144,8 @@ get_header(); ?>
                     $random_keys = array_rand($slides, 1); ?>
             <a class="top-item-cover flex flex-center"
               href="<?php echo get_permalink($post->ID); ?>"" target="
-              _blank" rel="bookmark"><img 
-                src="<?php echo $slides[$random_keys]['url']; ?>?x-oss-process=image/auto-orient,1/resize,m_fill,w_350,h_198/quality,Q_100"
+              _blank" rel="bookmark"><img
+                src="<?php echo $slides[$random_keys]['url']; ?>?x-oss-process=image/auto-orient,1/resize,m_fill,w_350,h_198/quality,q_98/format,webp"
                 alt="<?php echo $post->post_title; ?>"></a>
             <?php
                 } ?>
@@ -206,7 +206,7 @@ get_header(); ?>
 
         </div>
         <!-- .top -->
-        
+
         <?php
         /**
          * 话题.
@@ -326,7 +326,7 @@ get_header(); ?>
             <?php wp_pagenavi(); ?>
           </div>
           <!-- .wp-pagenavi-container -->
-            
+
           <div class="pagination-container flex flex-center dp-md-none">
             <?php
             /**

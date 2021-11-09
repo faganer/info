@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" integrity="sha256-Ww++W3rXBfapN8SZitAvc9jw2Xb+Ixt0rvDsmWmQyTo=" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="commons.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@3.12.2/dist/less.min.js" integrity="sha256-Qe1X0NnA3xRN0ctlQt973xvcu5aja+kEDfiwAGoQfqI=" crossorigin="anonymous"></script>
+    <title>运算符优先级</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="https://getkit.cn/">鸽听网</a></li>
+                <li class="breadcrumb-item"><a href="https://getkit.cn/resources/">在线工具</a></li>
+                <li class="breadcrumb-item"><a href="https://getkit.cn/resources/commons/">常用对照表</a></li>
+                <li class="breadcrumb-item active" aria-current="page">运算符优先级</li>
+            </ol>
+        </nav>
+
+        <ul class="nav nav-tabs mb-3">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">HTTP Content-type 对照表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="HTML-escape-character.html">HTML转义字符</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="rgb.html">RGB颜色参考</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ascii.html">ASCII对照表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http-status-code.html">HTTP状态码详解</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="operator.html">运算符优先级</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tcp-udp.html">TCP/UDP常见端口参考</a>
+            </li>
+        </ul>
+
+        <div class="row">
+            <div class="col-12 col-lg-4 col-xl-3">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-java-list" data-toggle="list" href="#list-java" role="tab" aria-controls="java">Java 运算符优先级</a>
+                    <a class="list-group-item list-group-item-action" id="list-cpp-list" data-toggle="list" href="#list-cpp" role="tab" aria-controls="cpp">C++ 运算符优先级</a>
+                    <a class="list-group-item list-group-item-action" id="list-clang-list" data-toggle="list" href="#list-clang" role="tab" aria-controls="clang">C 语言运算符优先级</a>
+                    <a class="list-group-item list-group-item-action" id="list-php-list" data-toggle="list" href="#list-php" role="tab" aria-controls="php">PHP 运算符优先级</a>
+                    <a class="list-group-item list-group-item-action" id="list-python-list" data-toggle="list" href="#list-python" role="tab" aria-controls="python">Python 运算符优先级</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8 col-xl-9">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-java" role="tabpanel" aria-labelledby="list-java-list">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>运算符</th>
+                                        <th>优先级</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>postfix</td>
+                                        <td><code><em>expr</em>++ <em>expr</em>--</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>unary</td>
+                                        <td><code>++<em>expr</em> --<em>expr</em> +<em>expr</em> -<em>expr</em> ~ !</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>multiplicative</td>
+                                        <td><code>* / %</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>additive</td>
+                                        <td><code>+ -</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>shift</td>
+                                        <td><code>&lt;&lt; &gt;&gt; &gt;&gt;&gt;</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>relational</td>
+                                        <td><code>&lt; &gt; &lt;= &gt;= instanceof</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>equality</td>
+                                        <td><code>== !=</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>bitwise AND</td>
+                                        <td><code>&amp;</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>bitwise exclusive OR</td>
+                                        <td><code>^</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>bitwise inclusive OR</td>
+                                        <td><code>|</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>logical AND</td>
+                                        <td><code>&amp;&amp;</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>logical OR</td>
+                                        <td><code>||</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ternary</td>
+                                        <td><code>? :</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>assignment</td>
+                                        <td><code>= += -= *= /= %= &amp;= ^= |= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;=</code>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-cpp" role="tabpanel" aria-labelledby="list-cpp-list">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th> Precedence
+                                        </th>
+                                        <th> Operator
+                                        </th>
+                                        <th> Description
+                                        </th>
+                                        <th> Associativity
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th> 1
+                                        </th>
+                                        <td> <code>::</code>
+                                        </td>
+                                        <td> Scope resolution
+                                        </td>
+                                        <td style="vertical-align: top" rowspan="6"> Left-to-right
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="5"> 2
+                                        </th>
+                                        <td style="border-bottom-style: none"> <code>++</code>&nbsp;&nbsp; <code>--</code>
+                                        </td>
+                                        <td style="border-bottom-style: none"> Suffix/postfix increment and decrement
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>()</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Function call
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>[]</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Array subscripting
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>.</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Element selection by reference
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>−&gt;</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Element selection through pointer
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="9"> 3
+                                        </th>
+                                        <td style="border-bottom-style: none"> <code>++</code>&nbsp;&nbsp; <code>--</code>
+                                        </td>
+                                        <td style="border-bottom-style: none"> Prefix increment and decrement
+                                        </td>
+                                        <td style="vertical-align: top" rowspan="9"> Right-to-left
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>+</code>&nbsp;&nbsp; <code>−</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Unary plus and minus
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>!</code>&nbsp;&nbsp; <code>~</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Logical NOT and bitwise NOT
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>(<i>type</i>)</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Type cast
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>*</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Indirection (dereference)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>&amp;</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Address-of
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>sizeof</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Size-of
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>new</code>, <code>new[]</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Dynamic memory allocation
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top-style: none"> <code>delete</code>, <code>delete[]</code>
+                                        </td>
+                                        <td style="border-top-style: none"> Dynamic memory deallocation
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 4
+                                        </th>
+                                        <td> <code>.*</code>&nbsp;&nbsp; <code>-&gt;*</code>
+                                        </td>
+                                        <td> Pointer to member
+                                        </td>
+                                        <td style="vertical-align: top" rowspan="12"> Left-to-right
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 5
+                                        </th>
+                                        <td> <code>*</code>&nbsp;&nbsp; <code>/</code>&nbsp;&nbsp; <code>%</code>
+                                        </td>
+                                        <td> Multiplication, division, and remainder
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 6
+                                        </th>
+                                        <td> <code>+</code>&nbsp;&nbsp; <code>−</code>
+                                        </td>
+                                        <td> Addition and subtraction
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 7
+                                        </th>
+                                        <td> <code>&lt;&lt;</code>&nbsp;&nbsp; <code>&gt;&gt;</code>
+                                        </td>
+                                        <td> Bitwise left shift and right shift
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2"> 8
+                                        </th>
+                                        <td style="border-bottom-style: none"> <code>&lt;</code>&nbsp;&nbsp; <code>&lt;=</code>
+                                        </td>
+                                        <td style="border-bottom-style: none"> For relational operators &lt; and ≤ respectively
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top-style: none"> <code>&gt;</code>&nbsp;&nbsp; <code>&gt;=</code>
+                                        </td>
+                                        <td style="border-top-style: none"> For relational operators &gt; and ≥ respectively
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 9
+                                        </th>
+                                        <td> <code>==</code>&nbsp;&nbsp; <code>!=</code>
+                                        </td>
+                                        <td> For relational = and ≠ respectively
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 10
+                                        </th>
+                                        <td> <code>&amp;</code>
+                                        </td>
+                                        <td> Bitwise AND
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 11
+                                        </th>
+                                        <td> <code>^</code>
+                                        </td>
+                                        <td> Bitwise XOR (exclusive or)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 12
+                                        </th>
+                                        <td> <code>|</code>
+                                        </td>
+                                        <td> Bitwise OR (inclusive or)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 13
+                                        </th>
+                                        <td> <code>&amp;&amp;</code>
+                                        </td>
+                                        <td> Logical AND
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 14
+                                        </th>
+                                        <td> <code>||</code>
+                                        </td>
+                                        <td> Logical OR
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 15
+                                        </th>
+                                        <td> <code>?:</code>
+                                        </td>
+                                        <td> Ternary conditional
+                                        </td>
+                                        <td style="vertical-align: top" rowspan="7"> Right-to-Left
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="5"> 16
+                                        </th>
+                                        <td style="border-bottom-style: none"> <code>=</code>
+                                        </td>
+                                        <td style="border-bottom-style: none"> Direct assignment (provided by default for C++ classes)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>+=</code>&nbsp;&nbsp; <code>−=</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Assignment by sum and difference
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>*=</code>&nbsp;&nbsp; <code>/=</code>&nbsp;&nbsp; <code>%=</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Assignment by product, quotient, and remainder
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>&lt;&lt;=</code>&nbsp;&nbsp; <code>&gt;&gt;=</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Assignment by bitwise left shift and right shift
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top-style: none"> <code>&amp;=</code>&nbsp;&nbsp; <code>^=</code>&nbsp;&nbsp; <code>|=</code>
+                                        </td>
+                                        <td style="border-top-style: none"> Assignment by bitwise AND, XOR, and OR
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 17
+                                        </th>
+                                        <td> <code>throw</code>
+                                        </td>
+                                        <td> Throw operator (for exceptions)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 18
+                                        </th>
+                                        <td> <code>,</code>
+                                        </td>
+                                        <td> Comma
+                                        </td>
+                                        <td> Left-to-right
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-clang" role="tabpanel" aria-labelledby="list-clang-list">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th> Precedence
+                                        </th>
+                                        <th> Operator
+                                        </th>
+                                        <th> Description
+                                        </th>
+                                        <th> Associativity
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="6"> 1
+                                        </th>
+                                        <td style="border-bottom-style: none"> <code>++</code> <code>--</code>
+                                        </td>
+                                        <td style="border-bottom-style: none"> Suffix/postfix increment and decrement
+                                        </td>
+                                        <td style="vertical-align: top" rowspan="6"> Left-to-right
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>()</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Function call
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>[]</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Array subscripting
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>.</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Structure and union member access
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>−&gt;</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Structure and union member access through pointer
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>(<i>type</i>){<i>list</i>}</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Compound literal<span class="t-mark">(C99)</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="8"> 2
+                                        </th>
+                                        <td style="border-bottom-style: none"> <code>++</code> <code>--</code>
+                                        </td>
+                                        <td style="border-bottom-style: none"> Prefix increment and decrement
+                                        </td>
+                                        <td style="vertical-align: top" rowspan="8"> Right-to-left
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>+</code> <code>−</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Unary plus and minus
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>!</code> <code>~</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Logical NOT and bitwise NOT
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>(<i>type</i>)</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Type cast
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>*</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Indirection (dereference)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>&amp;</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Address-of
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>sizeof</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Size-of
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>_Alignof</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Alignment requirement<span class="t-mark">(C11)</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 3
+                                        </th>
+                                        <td> <code>*</code> <code>/</code> <code>%</code>
+                                        </td>
+                                        <td> Multiplication, division, and remainder
+                                        </td>
+                                        <td style="vertical-align: top" rowspan="11"> Left-to-right
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 4
+                                        </th>
+                                        <td> <code>+</code> <code>−</code>
+                                        </td>
+                                        <td> Addition and subtraction
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 5
+                                        </th>
+                                        <td> <code>&lt;&lt;</code> <code>&gt;&gt;</code>
+                                        </td>
+                                        <td> Bitwise left shift and right shift
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2"> 6
+                                        </th>
+                                        <td style="border-bottom-style: none"> <code>&lt;</code> <code>&lt;=</code>
+                                        </td>
+                                        <td style="border-bottom-style: none"> For relational operators &lt; and ≤ respectively
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top-style: none"> <code>&gt;</code> <code>&gt;=</code>
+                                        </td>
+                                        <td style="border-top-style: none"> For relational operators &gt; and ≥ respectively
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 7
+                                        </th>
+                                        <td> <code>==</code> <code>!=</code>
+                                        </td>
+                                        <td> For relational = and ≠ respectively
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 8
+                                        </th>
+                                        <td> <code>&amp;</code>
+                                        </td>
+                                        <td> Bitwise AND
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 9
+                                        </th>
+                                        <td> <code>^</code>
+                                        </td>
+                                        <td> Bitwise XOR (exclusive or)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 10
+                                        </th>
+                                        <td> <code>|</code>
+                                        </td>
+                                        <td> Bitwise OR (inclusive or)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 11
+                                        </th>
+                                        <td> <code>&amp;&amp;</code>
+                                        </td>
+                                        <td> Logical AND
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 12
+                                        </th>
+                                        <td> <code>||</code>
+                                        </td>
+                                        <td> Logical OR
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 13
+                                        </th>
+                                        <td> <code>?:</code>
+                                        </td>
+                                        <td> Ternary conditional
+                                        </td>
+                                        <td style="vertical-align: top" rowspan="6"> Right-to-Left
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="5"> 14
+                                        </th>
+                                        <td style="border-bottom-style: none"> <code>=</code>
+                                        </td>
+                                        <td style="border-bottom-style: none"> Simple assignment
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>+=</code> <code>−=</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Assignment by sum and difference
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>*=</code> <code>/=</code> <code>%=</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Assignment by product, quotient, and remainder
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-style: none; border-top-style: none"> <code>&lt;&lt;=</code> <code>&gt;&gt;=</code>
+                                        </td>
+                                        <td style="border-bottom-style: none; border-top-style: none"> Assignment by bitwise left shift and right shift
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top-style: none"> <code>&amp;=</code> <code>^=</code> <code>|=</code>
+                                        </td>
+                                        <td style="border-top-style: none"> Assignment by bitwise AND, XOR, and OR
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th> 15
+                                        </th>
+                                        <td> <code>,</code>
+                                        </td>
+                                        <td> Comma
+                                        </td>
+                                        <td> Left-to-right
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-php" role="tabpanel" aria-labelledby="list-php-list">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-bordered table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>结合方向</th>
+                                        <th>运算符</th>
+                                        <th>附加信息</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>非结合</td>
+                                        <td><code>clone new</code></td>
+                                        <td>clone 和 new</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>[</code></td>
+                                        <td> <span class="function">array()</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>非结合</td>
+                                        <td><code>++ --</code></td>
+                                        <td>
+                                            递增／递减运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>非结合</td>
+                                        <td><code>~ - (int) (float) (string) (array) (object) (bool) @</code></td>
+                                        <td>
+                                            类型
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>非结合</td>
+                                        <td><code>instanceof</code></td>
+                                        <td>
+                                            类型
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>右结合</td>
+                                        <td><code>!</code></td>
+                                        <td>
+                                            逻辑操作符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>* / %</code></td>
+                                        <td>
+                                            算术运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>+ - .</code></td>
+                                        <td>
+                                            算术运算符 和 字符串运算符</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>&lt;&lt; &gt;&gt;</code></td>
+                                        <td>
+                                            位运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>非结合</td>
+                                        <td><code>&lt; &lt;= &gt; &gt;= &lt;&gt;</code></td>
+                                        <td>
+                                            比较运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>非结合</td>
+                                        <td><code>== != === !==</code></td>
+                                        <td>
+                                            比较运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>&amp;</code></td>
+                                        <td>
+                                            位运算符 和 引用</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>^</code></td>
+                                        <td>
+                                            位运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>|</code></td>
+                                        <td>
+                                            位运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>&amp;&amp;</code></td>
+                                        <td>
+                                            逻辑运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>||</code></td>
+                                        <td>
+                                            逻辑运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>? :</code></td>
+                                        <td>
+                                            三元运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>右</td>
+                                        <td>
+                                            <code>= += -= *= /= .= %= &amp;= |= ^= &lt;&lt;= &gt;&gt;=</code>
+                                        </td>
+                                        <td>
+                                            赋值运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>and</code></td>
+                                        <td>
+                                            逻辑运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>xor</code></td>
+                                        <td>
+                                            逻辑运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>or</code></td>
+                                        <td>
+                                            逻辑运算符
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>左</td>
+                                        <td><code>,</code></td>
+                                        <td>多处用到</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-python" role="tabpanel" aria-labelledby="list-python-list">
+                        <div class="alert alert-info">
+                            <p>这个表给出Python的运算符优先级（从低到高）.</p>
+                            <p>从最低的优先级（最松散地结合）到最高的优先级（最紧密地结合）。</p>
+                            <p>这意味着在一个表达式中，Python会首先计算表中较下面的运算符，然后在计算列在表上部的运算符。</p>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-sm table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>运算符</th>
+                                        <th>描述</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>lambda</code></td>
+                                        <td>Lambda表达式</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>or</code></td>
+                                        <td>布尔“或”</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>and</code></td>
+                                        <td>布尔“与”</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>not x</code></td>
+                                        <td>布尔“非”</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>in，not in</code></td>
+                                        <td>成员测试</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>is，is not</code></td>
+                                        <td>同一性测试</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;，&lt;=，&gt;，&gt;=，!=，==</code></td>
+                                        <td>比较</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>|</code></td>
+                                        <td>按位或</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>^</code></td>
+                                        <td>按位异或</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&amp;</code></td>
+                                        <td>按位与</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>&lt;&lt;，&gt;&gt;</code></td>
+                                        <td>移位</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>+，-</code></td>
+                                        <td>加法与减法</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>*，/，%</code></td>
+                                        <td>乘法、除法与取余</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>+x，-x</code></td>
+                                        <td>正负号</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>~x</code></td>
+                                        <td>按位翻转</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>**</code></td>
+                                        <td>指数</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>x.attribute</code></td>
+                                        <td>属性参考</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>x[index]</code></td>
+                                        <td>下标</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>x[index:index]</code></td>
+                                        <td>寻址段</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>f(arguments...)</code></td>
+                                        <td>函数调用</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>(experession,...)</code></td>
+                                        <td>绑定或元组显示</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>[expression,...]</code></td>
+                                        <td>列表显示</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>{key:datum,...}</code></td>
+                                        <td>字典显示</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>'expression,...'</code></td>
+                                        <td>字符串转换</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js" integrity="sha256-ecWZ3XYM7AwWIaGvSdmipJ2l1F4bN9RXW6zgpeAiZYI=" crossorigin="anonymous"></script>
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?d03c6aa8bd7c946819fe6912a648b1c5";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+        // 百度自动推送
+        (function() {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+
+        // 360自动收录
+        (function() {
+            var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+            document.write('<script src="' + src + '">');
+        })();
+    </script>
+</body>
+
+</html>
