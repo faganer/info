@@ -14,6 +14,25 @@ $csf = get_option('_prefix_my_options');
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="x-dns-prefetch-control" content="on">
+    <?php
+    /**
+     * 头条搜索：时间因子
+     */
+    if( is_single() ) {
+    $pTime = get_the_time( 'U' );
+    $uTime = get_the_modified_time( 'U' );
+    $lTime = get_the_date( DATE_W3C );
+    if( $pTime !== $uTime ){
+      $lTime = get_the_modified_time( DATE_W3C );
+    }?>
+      <?php if(get_the_date( DATE_W3C )){?>
+      <meta property="bytedance:published_time" content="<?php echo get_the_date( DATE_W3C );?>" />
+      <?php }?>
+      <?php if(get_the_modified_time( DATE_W3C )){?>
+      <meta property="bytedance:lrDate_time" content="<?php echo get_the_modified_time( DATE_W3C );?>" />
+      <?php }?>
+    <meta property="bytedance:updated_time" content="<?php echo $lTime;?>" />
+    <?php }?>
     <?php wp_head(); ?>
 </head>
 
