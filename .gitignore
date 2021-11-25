@@ -1,1 +1,5 @@
 node_modules
+.git
+yarn-error.log
+.cache
+package-lock.json

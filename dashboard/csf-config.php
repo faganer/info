@@ -260,21 +260,9 @@ if( class_exists( 'CSF' ) ) {
         'default' => false
       ),
       array(
-        'id'      => 'opt-func-27',
-        'type'    => 'switcher',
-        'title'   => '日志修订',
-        'default' => false
-      ),
-      array(
         'id'      => 'opt-func-2',
         'type'    => 'switcher',
         'title'   => '输出版本号',
-        'default' => false
-      ),
-      array(
-        'id'      => 'opt-func-4',
-        'type'    => 'switcher',
-        'title'   => '古滕堡编辑器',
         'default' => false
       ),
       array(

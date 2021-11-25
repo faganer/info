@@ -225,18 +225,6 @@ if(empty(get_option('_prefix_my_options')['opt-func-3']) || get_option('_prefix_
 }
 
 /**
- * WordPress 5.0禁用古滕堡编辑器的方法
- * https://wpmore.cn/wordpress-disable-gutenberg.html
- */
-if(empty(get_option('_prefix_my_options')['opt-func-4']) || get_option('_prefix_my_options')['opt-func-4'] === '0'){
-	remove_action('wp_enqueue_scripts', 'wp_common_block_scripts_and_styles');
-	remove_action('admin_enqueue_scripts', 'wp_common_block_scripts_and_styles');
-	remove_filter('the_content', 'do_blocks', 9);
-	add_filter('use_block_editor_for_post_type', '__return_false');
-	wp_deregister_style('wp-block-library');
-}
-
-/**
  * WordPress后台加载慢？load-scripts.php、load-styles.php不合并JS、CSS
  * https://wpmore.cn/wordpress%e5%90%8e%e5%8f%b0%e5%8a%a0%e8%bd%bd%e6%85%a2%ef%bc%9fload-scripts-php%e3%80%81load-styles-php%e4%b8%8d%e5%90%88%e5%b9%b6js%e3%80%81css.html
  */
@@ -551,18 +539,6 @@ if( empty(get_option('_prefix_my_options')['opt-func-26']) || get_option('_prefi
 	remove_filter('the_content', 'wptexturize');
 	remove_filter('the_excerpt', 'wptexturize');
 	remove_filter('comment_text', 'wptexturize');
-}
-
-/**
- * 如何禁用WordPress日志修订功能
- * https://wpmore.cn/disabled-wp_revisions_to_keep.html
- */
-if(empty(get_option('_prefix_my_options')['opt-func-27']) ||  get_option('_prefix_my_options')['opt-func-27'] === '0'){
-	define('WP_POST_REVISIONS', false);
-	add_filter( 'wp_revisions_to_keep', 'specs_wp_revisions_to_keep', 10, 2 );
-	function specs_wp_revisions_to_keep( $num, $post ) {
-			return 0;
-	}
 }
 
 /**
