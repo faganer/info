@@ -6,7 +6,7 @@ $csf = get_option('_prefix_my_options');
           <div class="item dp-none dp-lg-block">
             <p class="footer-logo"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="<?php echo $csf['opt_footer_logo']["url"];?>" alt="<?php bloginfo('name'); ?>"></a></p>
 
-            <?php if (!empty($opt['opt_footer_desc'])) {?>
+            <?php if (!empty($csf['opt_footer_desc'])) {?>
               <p class="footer-desc"><?php echo $csf['opt_footer_desc'];?></p>
             <?php }?>
           </div>
@@ -29,7 +29,7 @@ $csf = get_option('_prefix_my_options');
         </div>
         <!-- .footer-guide -->
 
-        <p class="copyright">&copy <?php echo date('Y'); ?> <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>(<?php echo $_SERVER['HTTP_HOST']; ?>)，主题由<a href="https://wpmore.cn/" target="_blank" rel="nofollow">WPMORE</a>开发，服务器由<a href="https://getkit.cn/ifkc" target="_blank" rel="nofollow">阿里云</a>提供<?php if (!empty(get_option('_prefix_my_options')['opt-icp'])) {
+        <p class="copyright">&copy <?php echo date('Y'); ?> <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>(<?php echo $_SERVER['HTTP_HOST']; ?>)，主题由<a href="https://wpmore.cn/" target="_blank" rel="nofollow">WPMORE</a>开发，服务器由<a href="/ifkc" target="_blank" rel="nofollow">阿里云</a>提供<?php if (!empty(get_option('_prefix_my_options')['opt-icp'])) {
                   ?><a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">，<?php echo get_option('_prefix_my_options')['opt-icp']; ?></a><?php
               }?>。</p>
         <!-- .copyright -->
