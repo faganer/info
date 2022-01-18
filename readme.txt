@@ -5,7 +5,7 @@ Tags: responsive, carousel, self-media, Multi-user, multisite, blog
 Requires at least: 4.5
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 2.0
+Stable tag: 2.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -22,6 +22,9 @@ A starter theme called info.
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+
+= 2.1 - 2022-01-18 =
+* 修正浏览器兼容性样式问题
 
 = 2.0 - 2021-11-25 =
 * 调整构建工具

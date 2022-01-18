@@ -67,7 +67,7 @@
 
 .posts-item-title {
   box-orient: vertical;
-  display: box;
+  display: flex;
   font-size: 18px;
   -webkit-line-clamp: 2;
   line-height: 26px;
@@ -132,7 +132,7 @@
 .posts-item-desc {
   box-orient: vertical;
   color: $secondary-color;
-  display: box;
+  display: flex;
   font-size: 14px;
   height: 45px;
   -webkit-line-clamp: 2;

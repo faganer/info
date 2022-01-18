@@ -41,7 +41,7 @@
 
   h3 {
     box-orient: vertical;
-    display: box;
+    display: flex;
     font-size: 22px;
     -webkit-line-clamp: 2;
     line-height: 36px;
@@ -58,7 +58,7 @@
   .desc {
     box-orient: vertical;
     color: $secondary-color;
-    display: box;
+    display: flex;
     -webkit-line-clamp: 3;
     overflow: hidden;
     text-align: justify;
@@ -128,7 +128,7 @@
     }
 
     .top-item-desc {
-      display: box !important;
+      display: flex !important;
     }
   }
 
@@ -163,7 +163,7 @@
 
   h3 {
     box-orient: vertical;
-    display: box;
+    display: flex;
     height: 48px;
     -webkit-line-clamp: 2;
     line-height: 24px;
@@ -182,7 +182,7 @@
   box-orient: vertical;
   color: $secondary-color;
   display: none !important;
-  display: box;
+  display: flex;
   // line-height: 21px;
   font-size: 14px;
   height: 63px;
@@ -419,7 +419,7 @@
 
 .latest-item-title {
   box-orient: vertical;
-  display: box;
+  display: flex;
   font-size: 16px;
   -webkit-line-clamp: 2;
   line-height: 26px;
@@ -484,7 +484,7 @@
 .latest-item-desc {
   box-orient: vertical;
   color: $secondary-color;
-  display: box;
+  display: flex;
   font-size: 14px;
   height: 45px;
   -webkit-line-clamp: 2;

@@ -64,7 +64,7 @@
   li {
     box-orient: vertical;
     cursor: pointer;
-    display: box;
+    display: flex;
     font-size: 14px;
     -webkit-line-clamp: 2;
     line-height: 24px;
@@ -164,7 +164,7 @@
 
   .comment-content {
     box-orient: vertical;
-    display: box;
+    display: flex;
     -webkit-line-clamp: 3;
     line-height: 24px;
     margin: 0 -5px 0 -2px;
@@ -391,6 +391,7 @@
       width: 4px;
     }
   }
+
   // 推荐阅读 || 热门文章
   .widget-sticky,
   .widget-views {
@@ -405,7 +406,7 @@
 
       .title {
         box-orient: vertical;
-        display: box;
+        display: flex;
         font-size: 14px;
         -webkit-line-clamp: 2;
         line-height: 24px;
